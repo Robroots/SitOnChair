@@ -1,0 +1,30 @@
+*{
+    font-family: 'Lato', sans-serif;
+}
+
+html{
+    font-size: 16px;
+}
+
+section{
+    width: 100%;
+}
+
+.container{
+    width: 100%;
+    min-width: 365px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px
+}
+
+.green-letter {
+    color:$secondary-color;
+    font-weight: bolder;
+}
+
+.underline {
+    width: 11.5rem;
+    height: 10px;
+    background-color: #24BA9F;
+}

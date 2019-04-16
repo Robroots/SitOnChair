@@ -1,0 +1,11 @@
+@import "./scss/modules/reset";
+@import "./scss/modules/variables";
+@import "./modules/base";
+@import "./scss/modules/mixins";
+// @import "./scss/modules/grid";
+@import "./modules/animations";
+
+@import "./scss/partials/header.scss";
+@import "./scss/partials/gallery";
+@import "./partials/products";
+@import "./partials/prices";

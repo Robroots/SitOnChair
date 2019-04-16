@@ -1,0 +1,24 @@
+@mixin button($fontSize, $width, $margin, $padding) {
+    text-decoration: none;
+    background-color: #24BA9F;
+    border-radius: 10px;
+    border: none;
+    color: white;
+    font-size: $fontSize;
+    padding: $padding;
+    width: $width;
+    margin: $margin;
+    cursor: pointer;
+}
+
+@mixin tablet{
+    @media (min-width: 640px){
+        @content;
+    }
+}
+
+@mixin desktop{
+    @media (min-width: 1024px) {
+        @content;
+    }
+}

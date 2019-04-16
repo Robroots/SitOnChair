@@ -1,0 +1,99 @@
+.gallery{
+    @extend %gallery-gradient;
+    .container{
+        @extend %gallery-gradient;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        text-align: center;
+        padding: 0 20px;
+        >span{
+            display: none;
+        }
+        .description{
+            padding: 20px 0;
+            display: flex;
+            flex-direction: column;
+            h1{
+                padding: 20px;
+                font-size: 2rem;
+            }
+            p{
+                font-size: 1.4rem;
+                margin: 20px 0;
+                padding: 0 20px;
+            }
+        }
+        .button{
+            @include button(1.2rem, 100%, 0 0 20px,1rem 0);
+            order: -1;
+            display: none;
+            margin-bottom: 40px;
+        }
+        .black-chair{
+            width: 100%;
+        }
+    }
+    @include tablet{
+        .container{
+            position: relative;
+            flex-direction: row;
+            justify-content: space-between;
+            padding: 50px 20px;
+            .img-box{
+                padding-top: 20px;
+                align-self: flex-start;
+                @media (max-width: 704px){
+                    padding-top: 0;
+                    transform: translateY(-10%);
+                    align-self: center;
+                }
+            }
+            .description{
+                justify-content: space-between;
+                width: 50%;
+                h1{
+                    @media (max-width: 704px) {
+                        transform: translate(-50%, -20%);
+                        width: 92vw;
+                    }
+                }
+                p{
+                    font-size: 1.2rem;
+                }
+            }
+            .button{
+                order:2;
+                @media (max-width: 837px){
+                    transform: translate(-50%, 20%);
+                    width: 92vw;
+                }
+
+            }
+        }
+    }
+    @include desktop{
+        .container{
+            >span{
+                flex-grow: 1;
+                display: initial;
+                font-size: 5rem;
+                font-weight: normal;
+                align-self: center;
+                cursor: pointer;
+            }
+            .img-box{
+                padding: 0;
+                align-self: center;
+                flex-grow: 2;
+            }
+            .description{
+                flex-grow: 2;
+                padding-right: 40px;
+                h1{
+                    font-size: 2.6rem;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,117 @@
+.prices{
+    width: 100%;
+    background: #F1F1F1;
+    .container{
+        background: inherit;
+        padding: 20px 20px;
+        .section-header {
+            color: #616161;
+            font-weight: 400;
+            font-size: 1.8em;
+            padding: 1.8em 10px;
+        }
+    }
+}
+.prices-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 0;
+}
+
+.prices-box {
+    text-align: center;
+    border: solid 3px #DBDBDB;
+    position: relative;
+    flex-grow: 1;
+    background-color: #F9F9F9;
+    margin: 10px 10px 50px 10px;
+    max-width: 480px;
+    .circle {
+        @extend %prices-circle-top;
+    }
+    .circle2 {
+        @extend %prices-circle-inner;
+    }
+    h3 {
+        color: $secondary-color;
+        font-weight: 400;
+        font-size: 2rem;
+        padding: 2rem 0;
+    }
+    .circle-price {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        box-sizing: border-box;
+        border: solid 3px #DBDBDB;
+        width: 10rem;
+        height: 10rem;
+        border-radius: 50%;
+        margin: 0 auto;
+        margin-bottom: 3rem;
+        * {
+            color: #BABABA;
+        }
+        .price {
+            display: flex;
+            font-size: 3.3rem;
+            font-weight: 900;
+            position: relative;
+            justify-content: center;
+        }
+        .pln-msc {
+            font-size: 1.2rem;
+            font-weight: 700;
+        }
+        .upper-index {
+            vertical-align: super;
+            font-size: 0.4em;
+            font-weight: 900;
+        }
+    }
+    li{
+        list-style: none;
+        display: block;
+        font-size: 2em;
+        font-weight: 300;
+        background-color: #E4E4E4;
+        padding: 0.3em;
+        color: #969696;
+        
+    }
+    li:nth-of-type(2), .prices-box li:nth-of-type(4) {
+        background-color: #F1F1F1;
+        color: #7B7B7B;
+    }
+    .box-button {
+        @include button(1.5rem, 10rem, 2rem 1rem 1rem 1rem, 0.5rem 0);
+    }
+    @include desktop{
+        width: 30%;
+        margin: 20px 20px 0 0;
+        &:last-of-type{
+            margin-right: 0;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+.prices-box:first-of-type li:nth-of-type(3), .prices-box:first-of-type li:nth-of-type(4) {
+    visibility: hidden;
+}
+
+.prices-box:nth-of-type(2) li:nth-of-type(4) {
+    visibility: hidden;
+}

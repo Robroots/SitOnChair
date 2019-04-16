@@ -1,0 +1,37 @@
+.ham-clicked{
+    transform: scale(1.1);
+    color: $secondary-color;
+}
+
+.container nav.show {
+    max-height: 50px;
+}
+
+.prices-box:hover{
+    background-color: $secondary-color;
+    border: solid 3px $secondary-color;
+    cursor: pointer;
+    .box-button {
+        background-color: white;
+        color: $secondary-color;
+    }
+    h3 {
+        color: white;
+    }
+    .circle-price {
+        background-color: #F1F1F1;
+        color: $secondary-color;
+        border: #F1F1F1;
+    }
+    .circle-price span {
+        color:$secondary-color;
+    }
+    .circle {
+        background-color: inherit;
+        border: $secondary-color;
+    }
+    .circle2{
+        background-color: #F1F1F1;
+        border: #F1F1F1;
+    }
+}
