@@ -27,6 +27,7 @@
     background-color: $boxes-bg-color;
     margin: 10px 10px 50px 10px;
     max-width: 350px;
+    transition: all 0.3s;
     .circle {
         @extend %prices-circle-top;
     }
@@ -87,7 +88,7 @@
         @include button(1.5em, 10em, 1em 1em 1em 1em, 0.5em 0);
     }
     @include desktop{
-        font-size: 1rem;
+        font-size: 0.8rem;
         max-width: 450px;
         width: 30%;
         margin: 20px 20px 0 0;

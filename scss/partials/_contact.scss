@@ -39,8 +39,12 @@
             align-items: center;
             color: $font-color-form;
             .checkbox{
+                position: relative;
+                background: white;
+                min-width: 50px;
+                min-height: 50px;
                 margin-right: 20px;
-                padding: 5px 3px 5px 1px;
+                cursor: pointer;
                 @extend %thin-green-border;
             }
         }

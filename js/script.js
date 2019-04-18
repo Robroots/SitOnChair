@@ -5,6 +5,7 @@ console.log('DOM');
     var nav = document.querySelector("nav");
     var galleryButton = document.querySelector(".gallery button");
     var gallery = document.querySelector(".gallery .container");
+    var checkbox = document.querySelector(".checkbox");
 
     window.addEventListener("load", function(){
         if (innerWidth>=640){
@@ -18,6 +19,10 @@ console.log('DOM');
         this.classList.toggle("ham-clicked");
         nav.classList.toggle("show");
     })//Menu hamburger disappear and navigation sliding
+
+    checkbox.addEventListener("click", function(){
+        this.classList.toggle("checked");
+    })
 
     mobileMediaQuery(nav, hamburger, galleryButton, gallery);
 });

@@ -21,6 +21,9 @@
     width: $width;
     margin: $margin;
     cursor: pointer;
+    &:hover {
+        animation: flash 1s forwards;
+    }
 }
 %gallery-gradient {
     background: rgba(255,255,255,1);
