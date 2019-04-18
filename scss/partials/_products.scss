@@ -18,10 +18,11 @@
         .text-block {
             position: absolute;
             bottom: 5%;
-            background-color: hsla(0, 0%, 100%, 0.5);
+            background-color: $products-textblock-bg-color;
             width: 100%;
             bottom: 20px;
             padding: 1rem 1rem 2rem 2rem;
+            @extend %underline;
         }
         
     }
@@ -36,7 +37,7 @@
         p {
             padding: 1em 0;
             font-size: 1.2rem;
-            color: #9C9C9C;
+            color: $font-color-secondary;
         }
     }
     @include desktop{

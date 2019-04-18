@@ -5,10 +5,7 @@
         background: inherit;
         padding: 20px 20px;
         .section-header {
-            color: #616161;
-            font-weight: 400;
-            font-size: 1.8em;
-            padding: 1.8em 10px;
+            @extend %section-headers;
         }
     }
 }
@@ -22,13 +19,14 @@
 }
 
 .prices-box {
+    font-size: 0.7rem;  // Here change size of whole box
     text-align: center;
-    border: solid 3px #DBDBDB;
+    border: solid 3px $boxes-border-color;
     position: relative;
     flex-grow: 1;
-    background-color: #F9F9F9;
+    background-color: $boxes-bg-color;
     margin: 10px 10px 50px 10px;
-    max-width: 480px;
+    max-width: 350px;
     .circle {
         @extend %prices-circle-top;
     }
@@ -38,32 +36,32 @@
     h3 {
         color: $secondary-color;
         font-weight: 400;
-        font-size: 2rem;
-        padding: 2rem 0;
+        font-size: 2em;
+        padding: 1em 0;
     }
     .circle-price {
         display: flex;
         flex-direction: column;
         justify-content: center;
         box-sizing: border-box;
-        border: solid 3px #DBDBDB;
-        width: 10rem;
-        height: 10rem;
+        border: solid 3px $boxes-border-color;
+        width: 10em;
+        height: 10em;
         border-radius: 50%;
         margin: 0 auto;
-        margin-bottom: 3rem;
+        margin-bottom: 3em;
         * {
-            color: #BABABA;
+            color: $boxes-border-color;
         }
         .price {
             display: flex;
-            font-size: 3.3rem;
+            font-size: 3.3em;
             font-weight: 900;
             position: relative;
             justify-content: center;
         }
         .pln-msc {
-            font-size: 1.2rem;
+            font-size: 1.2em;
             font-weight: 700;
         }
         .upper-index {
@@ -77,41 +75,24 @@
         display: block;
         font-size: 2em;
         font-weight: 300;
-        background-color: #E4E4E4;
+        background-color: $boxes-li-bg-color;
         padding: 0.3em;
-        color: #969696;
+        color: $boxes-li-color;
         
     }
-    li:nth-of-type(2), .prices-box li:nth-of-type(4) {
-        background-color: #F1F1F1;
-        color: #7B7B7B;
+    li:nth-of-type(2),li:nth-of-type(4) {
+        @extend %prices-li-even;
     }
     .box-button {
-        @include button(1.5rem, 10rem, 2rem 1rem 1rem 1rem, 0.5rem 0);
+        @include button(1.5em, 10em, 1em 1em 1em 1em, 0.5em 0);
     }
     @include desktop{
+        font-size: 1rem;
+        max-width: 450px;
         width: 30%;
         margin: 20px 20px 0 0;
         &:last-of-type{
             margin-right: 0;
         }
     }
-}
-
-
-
-
-
-
-
-
-
-
-
-.prices-box:first-of-type li:nth-of-type(3), .prices-box:first-of-type li:nth-of-type(4) {
-    visibility: hidden;
-}
-
-.prices-box:nth-of-type(2) li:nth-of-type(4) {
-    visibility: hidden;
 }
