@@ -2,4 +2,78 @@
     .section-header{
         @extend %section-headers;
     }
+    .chair{
+        display: none;
+    }
+    .form-box{
+        font-size: 0.5rem; // Here change size of whole form box
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0 10px;
+        width: 100%;
+        .form-input{
+            width: 100%;
+            input, textarea {
+                width: 100%;
+                font-size: 2.5em;
+                font-weight: 100;
+                padding: 0.4em 0.3em;
+                color: $font-color-form;
+                margin-bottom: 0.8em;
+                &::placeholder{
+                    color: $font-color-form;
+                }
+                @extend %thin-green-border;
+            }
+        }
+
+    }
+    .contact-box{
+        display: flex;
+        flex-direction: column;
+        padding: 0 10px;
+        .check-span{
+            display: flex;
+            align-items: center;
+            color: $font-color-form;
+            .checkbox{
+                margin-right: 20px;
+                padding: 5px 3px 5px 1px;
+                @extend %thin-green-border;
+            }
+        }
+
+        button{
+            @include button(2rem, 100%,20px 0,0.5em 2em);
+            font-weight: bolder;
+        }
+    }
+    @include tablet{
+        .chair{
+            display: initial;
+            float: right;
+            margin:20px 20px 0 0;
+        }
+        .form-box{
+            display: inline-block;
+            width: calc(100% - 290px);
+        }
+    }
+    @include desktop{
+        .chair{
+            margin:0 70px 0 0;
+        }
+        .form-box{
+            font-size: 0.8rem;
+            width: calc(100% - 400px);
+        }
+        .contact-box{
+            display: block;
+            float: right;
+            width: 375px;
+            transform: translateY(-172px)
+        }
+    }
 }
