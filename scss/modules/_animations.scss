@@ -5,7 +5,14 @@
 
 .container nav.show {
     max-height: 50px;
+    visibility: visible;
 }
+
+.visibility{
+    visibility: visible !important;
+    display: block !important;
+}
+
 
 .prices-box:hover{
     animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
@@ -59,13 +66,38 @@
     40%, 60% {
       transform: translate3d(4px, 0, 0);
     }
-  }
+}
 
-  @keyframes flash {
+ @keyframes flash {
 	0% {
 		opacity: .4;
 	}
 	100% {
 		opacity: .8;
 	}
+}
+
+.flash{
+    animation: flash 0.1s;
+}
+
+.move{
+    transform: translateX(-400px);
+    opacity: 0;
+}
+
+.move-back{
+    transform: translateX(400px);
+    opacity: 0;
+}
+
+.bg-image{
+    background-image: url("../images/black_chair.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.pointer-events{
+    pointer-events: none;
+    opacity: 0.5;
 }

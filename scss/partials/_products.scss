@@ -12,6 +12,10 @@
         margin: 10px;
         flex-grow: 0.5;
         @extend %products-border;
+        &:hover{
+            animation: flash 0.5s forwards;
+            cursor: pointer;
+        }
         img {
             width: 100%;
         }

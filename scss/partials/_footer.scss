@@ -1,6 +1,5 @@
 footer.container{
     color: $font-color-secondary;
-    display: inline-block;
     padding: 0 30px 30px 30px;
     text-align: center;
     .share{
@@ -44,5 +43,8 @@ footer.container{
     }
     @include desktop{
         transform: translateY(-60px);
+        .share {
+            margin-left: 16px;
+        }
     }
 }

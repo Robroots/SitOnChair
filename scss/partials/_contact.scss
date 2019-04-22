@@ -1,4 +1,9 @@
 .contact{
+    &::after{
+        content: "";
+        display: block;
+        clear: both;
+    }
     .section-header{
         @extend %section-headers;
     }
@@ -77,7 +82,7 @@
             display: block;
             float: right;
             width: 375px;
-            transform: translateY(-172px)
+            transform: translateY(-172px);
         }
     }
 }

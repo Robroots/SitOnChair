@@ -1,106 +1,128 @@
-.gallery{
+.gallery {
+  @extend %gallery-gradient;
+  .container {
     @extend %gallery-gradient;
-    .container{
-        @extend %gallery-gradient;
-        display: flex;
-        flex-direction: column-reverse;
-        justify-content: center;
-        text-align: center;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    text-align: center;
+    padding: 0 20px;
+    > span {
+      display: none;
+    }
+    .description {
+      padding: 20px 0;
+      display: flex;
+      flex-direction: column;
+      h1 {
+        padding: 20px;
+        font-size: 2rem;
+      }
+      p {
+        font-size: 1.4rem;
+        margin: 20px 0;
         padding: 0 20px;
-        >span{
-            display: none;
-        }
-        .description{
-            padding: 20px 0;
-            display: flex;
-            flex-direction: column;
-            h1{
-                padding: 20px;
-                font-size: 2rem;
-            }
-            p{
-                font-size: 1.4rem;
-                margin: 20px 0;
-                padding: 0 20px;
-            }
-        }
-        .button{
-            @include button(1.7rem, 100%, 0 0 20px,1rem 0);
-            order: -1;
-            display: none;
-            margin-bottom: 40px;
-        }
-        .black-chair{
-            width: 100%;
-        }
+      }
     }
-    @include tablet{
-        .container{
-            position: relative;
-            flex-direction: row;
-            justify-content: space-between;
-            padding: 50px 20px;
-            .img-box{
-                padding-top: 20px;
-                align-self: flex-start;
-                @media (max-width: 704px){
-                    padding-top: 0;
-                    transform: translateY(-10%);
-                    align-self: center;
-                }
-            }
-            .description{
-                justify-content: space-between;
-                width: 50%;
-                h1{
-                    @media (max-width: 704px) {
-                        transform: translate(-50%, -20%);
-                        width: 92vw;
-                    }
-                }
-                p{
-                    font-size: 1.2rem;
-                }
-            }
-            .button{
-                order:2;
-                font-size: 1.5rem;
-                width: 80%;
-                align-self: center;
-                @media (max-width: 837px){
-                    transform: translate(-50%, 20%);
-                    width: 92vw;
-                    align-self: auto;
-                }
-            }
-        }
+    .button {
+      @include button(1.7rem, 100%, 0 0 20px, 1rem 0);
+      order: -1;
+      display: none;
+      margin-bottom: 40px;
     }
-    @include desktop{
-        .container{
-            >span{
-                flex-grow: 1;
-                display: initial;
-                font-size: 5rem;
-                font-weight: normal;
-                align-self: center;
-                cursor: pointer;
-            }
-            .img-box{
-                padding: 0;
-                align-self: center;
-                flex-grow: 2;
-            }
-            .description{
-                flex-grow: 2;
-                padding-right: 40px;
-                h1{
-                    font-size: 2.6rem;
-                }
-            }
-            .button{
-                width: 70%;
-                align-self: center;
-            }
-        }
+    img {
+      width: 100%;
+      visibility: hidden;
+      display: none;
+      margin: 0 auto;
     }
+    .black-chair {
+      visibility: visible;
+      display: initial;
+    }
+  }
+  @include tablet {
+    .container {
+      position: relative;
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 50px 20px;
+      .img-box {
+        padding-top: 20px;
+        align-self: flex-start;
+        @media (max-width: 704px) {
+          padding-top: 0;
+          transform: translateY(-10%);
+          align-self: center;
+        }
+      }
+      .description {
+        justify-content: space-between;
+        width: 50%;
+        h1 {
+          @media (max-width: 704px) {
+            transform: translate(-50%, -20%);
+            width: 92vw;
+          }
+        }
+        p {
+          font-size: 1.2rem;
+        }
+      }
+      .button {
+        order: 2;
+        font-size: 1.5rem;
+        width: 80%;
+        align-self: center;
+        @media (max-width: 837px) {
+          transform: translate(-50%, 20%);
+          width: 92vw;
+          align-self: auto;
+        }
+      }
+    }
+  }
+  @include desktop {
+    .container {
+      justify-content: space-between;
+      > span {
+        z-index: 1;
+        max-width: 48px;
+        flex-grow: 1;
+        display: initial;
+        font-size: 5rem;
+        font-weight: normal;
+        align-self: center;
+        cursor: pointer;
+        user-select: none;
+      }
+      .img-box {
+        position: relative;
+        padding: 0;
+        align-self: center;
+        flex-grow: 2;
+        width: 470px;
+        height: 340px;
+      }
+      img {
+        position: absolute;
+        left: 0;
+        width: 100%;
+        visibility: visible;
+        display: initial;
+        transition: transform 0.5s, opacity 0.5s;
+      }
+      .description {
+        flex-grow: 2;
+        padding-right: 40px;
+        h1 {
+          font-size: 2.6rem;
+        }
+      }
+      .button {
+        width: 70%;
+        align-self: center;
+      }
+    }
+  }
 }

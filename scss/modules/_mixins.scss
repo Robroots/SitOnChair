@@ -36,6 +36,23 @@
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e0e0e0', GradientType=0 );
 }
 
+%triangle{
+        &:before {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 0;
+        height: 0;
+        border-left:10px solid transparent;
+        border-right: 10px solid transparent;
+        border-bottom: 10px solid black;
+        margin: auto 0;
+        left: 50%;
+        top: -10px;
+        transform: translateX(-50%);
+    }
+}
+
 %products-border{
     border: solid 2px $boxes-border-color;
 }

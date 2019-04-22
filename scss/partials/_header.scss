@@ -22,62 +22,100 @@ header{
             font-weight: bolder;
             padding: 15px;
         }
-        nav{
-            overflow: hidden;
+    }
+    nav{
+        visibility: hidden;
+        display: flex;
+        width: 100%;
+        max-height: 0;
+        transition: max-height 1s cubic-bezier(0.05, 0.94, 0.49, 0.88), visibility 0.1s;
+        li:first-of-type{
+            position: relative;
+        }
+        .nav-dropdown{
+            z-index: 1;
+            display: none;
+            visibility: hidden;
+            position: absolute;
+            background: transparent;
+            box-sizing: border-box;
+            padding: 38px 5px 5px 5px;
+            left: -1em;
+            li{
+                padding: 5px;
+                background: $header-bgcolor;
+                &:first-of-type{
+                    @extend %triangle;
+                }
+            }
+        }
+        >ul{
             display: flex;
             width: 100%;
-            max-height: 0;
-            transition: max-height 1s cubic-bezier(0.05, 0.94, 0.49, 0.88);
-            ul{
-                display: flex;
-                width: 100%;
-                padding: 10px 0;
-                justify-content: space-between;
-                list-style: none;
+            padding: 10px 0;
+            justify-content: space-between;
+            list-style: none;
+        }
+        a{
+            text-decoration: none;
+            font-size: 1.2rem;
+            padding: 5px 10px;
+            color: invert($font-color-primary);
+        }
+    }
+    // li:first-of-type{
+    //     position: relative;
+    //     &:hover .nav-dropdown{
+    //         visibility: visible;
+    //         left: -1em;
+    //         display: flex;
+    //         flex-direction: column;
+    //         justify-content: flex-end;
+    //     }
+    // }
+    @include tablet{
+        .container{
+            display: flex;
+            justify-content: space-between;
+            flex-direction: row;
+            .logo{
+                width:40%;
+                padding: 20px 0; 
+                background: none;
+                font-size: 1.1rem;
             }
-            a{
-                text-decoration: none;
-                font-size: 1.2rem;
-                padding: 5px 10px;
-                color: invert($font-color-primary);
-            }
-            .nav-dropdown{
+            .hamburger{
                 display: none;
             }
         }
-        
-    }
-    @include tablet{
-            .container{
-                display: flex;
-                justify-content: space-between;
-                flex-direction: row;
-                .logo{
-                    width:40%;
-                    padding: 20px 0; 
-                    background: none;
-                    font-size: 1.1rem;
-                }
-                .hamburger{
-                    display: none;
-                }
-                nav{
-                    max-height: 50px;
-                    width: 60%;
-                    ul{
-                        justify-content: flex-end;
-                        padding: 15px 0;
-                        a{
-                            font-size: 1rem;
-                            font-weight: bold;
-                        }
-                    }
-                }
+        .container nav{
+            max-height: 50px;
+            width: 60%;
+            >ul{
+                justify-content: flex-end;
+                padding: 15px 0;
             }
         }
+        .nav-link{
+            font-size: 1rem;
+            font-weight: bold;
+        }
+    }
     @include desktop{
         .logo{
             text-align: left;
+        }
+        nav{
+            max-height: 50px;
+            width: 60%;
+            >ul{
+                justify-content: flex-end;
+                padding: 15px 0;
+                .nav-link{
+                    font-size: 1rem;
+                    font-weight: bold;
+                }
+            }
         }
     }
 }
