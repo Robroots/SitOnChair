@@ -1,103 +1,107 @@
-.ham-clicked{
-    transform: scale(1.1);
-    color: $secondary-color;
+.ham-clicked {
+  transform: scale(1.1);
+  color: $secondary-color;
 }
 
 .container nav.show {
-    max-height: 50px;
-    visibility: visible;
+  max-height: 50px;
+  visibility: visible;
 }
 
-.visibility{
-    visibility: visible !important;
-    display: block !important;
+.visibility {
+  visibility: visible !important;
+  display: block !important;
 }
 
-
-.prices-box:hover{
-    animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
-    background-color: $secondary-color;
-    border: solid 3px $secondary-color;
-    cursor: pointer;
-    .box-button {
-        background-color: white;
-        color: $secondary-color;
-    }
-    h3 {
-        color: white;
-    }
-    .circle-price {
-        background-color: #F1F1F1;
-        color: $secondary-color;
-        border: #F1F1F1;
-    }
-    .circle-price span {
-        color:$secondary-color;
-    }
-    .circle {
-        background-color: inherit;
-        border: $secondary-color;
-    }
-    .circle2{
-        background-color: #F1F1F1;
-        border: #F1F1F1;
-    }
+.prices-box:hover {
+  animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+  background-color: $secondary-color;
+  border: solid 3px $secondary-color;
+  cursor: pointer;
+  .box-button {
+    background-color: white;
+    color: $secondary-color;
+  }
+  h3 {
+    color: white;
+  }
+  .circle-price {
+    background-color: #f1f1f1;
+    color: $secondary-color;
+    border: #f1f1f1;
+  }
+  .circle-price span {
+    color: $secondary-color;
+  }
+  .circle {
+    background-color: inherit;
+    border: $secondary-color;
+  }
+  .circle2 {
+    background-color: #f1f1f1;
+    border: #f1f1f1;
+  }
 }
 
-.contact-box div.thin-grenn-border.checkbox.checked{
-    background: url("../images/form_ok.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
+.contact-box div.thin-grenn-border.checkbox.checked {
+  background: url("../images/form_ok.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 @keyframes shake {
-    10%, 90% {
-      transform: translate3d(-1px, 0, 0);
-    }
-    
-    20%, 80% {
-      transform: translate3d(2px, 0, 0);
-    }
-  
-    30%, 50%, 70% {
-      transform: translate3d(-4px, 0, 0);
-    }
-  
-    40%, 60% {
-      transform: translate3d(4px, 0, 0);
-    }
+  10%,
+  90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+
+  20%,
+  80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%,
+  50%,
+  70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%,
+  60% {
+    transform: translate3d(4px, 0, 0);
+  }
 }
 
- @keyframes flash {
-	0% {
-		opacity: .4;
-	}
-	100% {
-		opacity: .8;
-	}
+@keyframes flash {
+  0% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 0.8;
+  }
 }
 
-.flash{
-    animation: flash 0.1s;
+.flash {
+  animation: flash 0.1s;
 }
 
-.move{
-    transform: translateX(-400px);
-    opacity: 0;
+.move {
+  transform: translateX(-400px);
+  opacity: 0;
 }
 
-.move-back{
-    transform: translateX(400px);
-    opacity: 0;
+.move-back {
+  transform: translateX(400px);
+  opacity: 0;
 }
 
-.bg-image{
-    background-image: url("../images/black_chair.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
+.bg-image {
+  background-image: url("../images/black_chair.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
-.pointer-events{
-    pointer-events: none;
-    opacity: 0.5;
+.pointer-events {
+  pointer-events: none;
+  opacity: 0.5;
 }

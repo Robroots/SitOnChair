@@ -4,9 +4,6 @@
     .container{
         background: inherit;
         padding: 20px 20px;
-        .section-header {
-            @extend %section-headers;
-        }
     }
 }
 .prices-wrapper{

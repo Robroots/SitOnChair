@@ -9,6 +9,9 @@ html{
 section{
     width: 100%;
 }
+.section-header{
+    @extend %section-headers;
+}
 
 .container{
     width: 100%;

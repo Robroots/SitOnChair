@@ -16,6 +16,9 @@
             animation: flash 0.5s forwards;
             cursor: pointer;
         }
+        &:hover .text-block{
+            opacity: 0;
+        }
         img {
             width: 100%;
         }
@@ -26,6 +29,7 @@
             width: 100%;
             bottom: 20px;
             padding: 1rem 1rem 2rem 2rem;
+            transition: all 0.2s;
             @include underline(0);
         }
         

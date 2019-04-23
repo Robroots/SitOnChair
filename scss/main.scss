@@ -2,7 +2,6 @@
 @import "./scss/modules/variables";
 @import "./modules/base";
 @import "./scss/modules/mixins";
-// @import "./scss/modules/grid";
 @import "./modules/animations";
 
 @import "./scss/partials/header.scss";
@@ -10,4 +9,5 @@
 @import "./partials/products";
 @import "./partials/prices";
 @import "./partials/contact";
-@import "./partials/footer"
+@import "./partials/footer";
+@import "./partials/calculator"
