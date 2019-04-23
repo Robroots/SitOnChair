@@ -28,7 +28,7 @@
       line-height: 0;
       color: $secondary-color;
       pointer-events: none;
-      transform: scale(6);
+      transform: scale(4);
       transform-origin: right;
     }
   }
@@ -93,15 +93,20 @@
       background: url("../images/form_ok.jpg");
     }
   }
-  img {
+  .example {
     display: none;
+    background-image: url("../images/red_chair.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: grayscale(1);
   }
   .summary-panel {
     display: flex;
     flex-direction: column;
     justify-content: center;
     padding: 0 10px;
-    font-size: 1.4em;
+    font-size: 1.8em;
     font-weight: normal;
     color: $font-color-alt;
     .title {
@@ -121,13 +126,19 @@
         flex-direction: column;
         justify-content: flex-start;
         min-height: 200px;
-        width: 50%;
+        width: 70%;
         border-right: solid 1px #cecece;
       }
       .panel-right {
+          width: 30%;
         border-right: none;
         align-items: flex-end;
       }
+    }
+    a{
+        align-self: center;
+        text-align: center;
+        @include button(2rem, 100%,30px 0 0 0,0.5em 2em)
     }
     .sum-container{
         display: flex;
@@ -136,12 +147,39 @@
     }
   }
   @include desktop {
+    .container{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    h3{
+        padding: 1.8em 0;
+    }
     .select-wrapper {
       font-size: 0.8rem;
       &::before {
-        transform: scale(8);
+        transform: scale(6);
         right: 25px;
       }
+    }
+    .example{
+        display: initial;
+        align-self: center;
+        width: 30%;
+        height: 250px;
+    }
+    .choice-part{
+        width: 35%;
+    }
+    .summary{
+        width: 35%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .summary-panel{
+        a{
+            width: initial;
+        }
     }
   }
 }

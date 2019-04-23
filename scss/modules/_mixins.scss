@@ -12,6 +12,7 @@
 
 @mixin button($fontSize, $width, $margin, $padding) {
   text-decoration: none;
+  text-align: center;
   background-color: $secondary-color;
   border-radius: 10px;
   border: none;
